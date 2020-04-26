@@ -1,0 +1,98 @@
+
+/*css animation
+units(window) vh, vw, vmin, vmax
+position
+shadow, filter*/
+
+
+
+body{
+    background-image: url(64cf3c81.png);
+}
+
+.center{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 100%;
+}
+
+.shedcolor1{
+    background-image: url(64cf3c81.png);
+    box-shadow: 0 0 10px 3px black;
+}
+
+.shedcolor2{
+    background-color: #666;
+    box-shadow: inset 0 0 10px 3px black; 
+}
+
+#preloader{
+    width: 40vh;
+    height: 40vh;
+}
+#lg{
+    width: 36vh;
+    height: 36vh;
+}
+
+#lg::before{
+    content: "";
+    display : block;
+    /*background-color: red;*/
+    width: 37.5vh;
+    height: 37.5vh;
+    position: absolute;
+    top: -1.05vh;
+    left: -1.05vh;
+    border-radius: 100%;
+    border: 0.3vh solid red;
+    border-top-color: transparent;
+    animation: rotation 1s infinite;
+}
+
+#sm{
+    width: 30vh;
+    height: 30vh;
+}
+
+#supersm{
+    width: 26vh;
+    height: 26vh;
+}
+
+#supersm::before{
+    content: "";
+    display : block;
+    /*background-color: red;*/
+    width: 27.5vh;
+    height: 27.5vh;
+    position: absolute;
+    top: -1.05vh;
+    left: -1.05vh;
+    border-radius: 100%;
+    border: 0.3vh solid red;
+    border-top-color: transparent;
+    animation: antirotation 1s infinite;
+}
+
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes antirotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
